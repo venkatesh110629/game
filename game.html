@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #charector{
+                width: 50px;
+                position: relative;
+                transition:all 0.5s;
+            }
+            .a{
+                width: 60px;
+                position: absolute;
+            }
+            #buttonsdiv{
+                position: absolute;
+                bottom: 20px;
+                width: 30vw;
+                height: 30vh;
+            }
+            #left{
+                rotate: -90deg;
+                left: 5px;
+                top: 8opx;
+            }
+            #right{
+                rotate: 90deg;
+                top: 80px;
+                right: 100px;
+            }
+            #down{
+                bottom: 10px;
+                rotate: 180deg;
+                left: 75px;
+
+            }
+            #up{
+                top: 20px;
+                left: 75px;
+            }
+            #far{
+                right: 5px;
+            }
+            #near{
+                bottom: 20px;
+                right: 5px;
+                rotate: 180deg;
+            }
+        
+    </style>
+</head>
+<body>
+    <img id="charector" src="C:\Users\venka\Downloads\icons8-puppy-50.png">
+    <div id="buttonsdiv">
+        <img src="C:\Users\venka\Downloads\arrow-left-red.png" class="a" id="left" onclick="left()">
+        <img src="C:\Users\venka\Downloads\arrow-left-red.png" class="a" id="right" onclick="right()">
+        <img src="C:\Users\venka\Downloads\arrow-left-red.png" class="a" id="up" onclick="up()">
+        <img src="C:\Users\venka\Downloads\arrow-left-red.png" class="a" id="down" onclick="down()">
+        <div>
+            <img src="C:\Users\venka\Downloads\arrow-left-red.png" class="a" id="far" onclick="far()">
+            <img src="C:\Users\venka\Downloads\arrow-left-red.png" class="a" id="near" onclick="near()">
+        </div>
+    </div>
+    <script>
+        var x=0;
+        var y=0;
+        var z=50;
+        function right()
+        {
+            x++;
+            document.getElementById("charector").style.left=x+"%"
+            document.getElementById("charector").style.rotate="0deg"
+        }
+        function left()
+        {
+            x--;
+            document.getElementById("charector").style.left=x+"%"
+            document.getElementById("charector").style.rotate="180deg"
+        }
+        function up()
+        {
+            y++;
+            document.getElementById("charector").style.bottom=y+"%"
+            document.getElementById("charector").style.rotate="-90deg"
+        }
+        function down()
+        {
+            y--;
+            document.getElementById("charector").style.bottom=y+"%"
+            document.getElementById("charector").style.rotate="90deg"
+        }
+        function far()
+        {
+            z--;
+            document.getElementById("charector").style.width=z+"px"
+        }
+        function near()
+        {
+            z++;
+            document.getElementById("charector").style.width=z+"px"
+            
+        }
+            
+    </script>
+    
+</body>
+</html>
